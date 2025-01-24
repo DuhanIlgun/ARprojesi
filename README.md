@@ -28,6 +28,13 @@ Uygulamayı aşağıdaki bağlantılardan indirebilirsiniz:
 
 ---
 
+## 📽️ Uygulama Tanıtım Videosu
+
+Uygulamanın nasıl çalıştığını görmek için YouTube tanıtım videosunu izleyebilirsiniz:  
+[YouTube Video](https://www.youtube.com/shorts/ltKXr1JgmU0)
+
+---
+
 ## 📖 Nasıl Çalışır?
 
 1. **Görselleri Taramak:** Uygulamayı başlattıktan sonra cihazınızın kamerasını "Sihirli Kareler" görseline odaklayın.
@@ -55,3 +62,4 @@ Eğer bir sorunuz veya öneriniz varsa, benimle iletişime geçmekten çekinmeyi
 Projeye katkıda bulunmak için bu repoyu fork'layabilir ve geliştirmeler yapabilirsiniz. Pull request'ler memnuniyetle karşılanır!
 
 ---
+
