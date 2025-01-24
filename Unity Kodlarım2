@@ -1,0 +1,44 @@
+using UnityEngine;
+
+public class ToplamaKontrol : MonoBehaviour
+{
+    public static int toplam; // Toplanan sayılar
+    public int hedefToplam; // Doğru olması gereken toplam
+
+    void Start()
+    {
+        toplam = 0; // İlk toplam sıfır
+    }
+
+    public static void SayıEkle(int sayı)
+    {
+        toplam += sayı; // Yeni sayıyı toplama ekle
+        Debug.Log($"Toplam şu an: {toplam}");
+    }
+
+    void Update()
+    {
+        // Eğer toplam hedefe ulaşırsa
+        if (toplam == hedefToplam)
+        {
+            Debug.Log("Doğru toplam!");
+            TümRenkleriDeğiştir(true);
+        }
+        else if (toplam > hedefToplam)
+        {
+            Debug.Log("Yanlış toplam!");
+            TümRenkleriDeğiştir(false);
+        }
+    }
+
+    private void TümRenkleriDeğiştir(bool doğruMu)
+    {
+        // Sahnedeki tüm hayvanların rengini değiştir
+        HayvanTiklama[] hayvanlar = Object.FindObjectsByType<HayvanTiklama>(FindObjectsSortMode.None);
+
+        foreach (var hayvan in hayvanlar)
+        {
+            hayvan.RenkDeğiştir(doğruMu);
+        }
+    }
+}
