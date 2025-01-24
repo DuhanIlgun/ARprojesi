@@ -1,0 +1,38 @@
+using UnityEngine;
+
+public class HayvanTiklama : MonoBehaviour
+{
+    private int sayı; // Her hayvan için atanacak sayı
+    private Renderer objRengi; // Objelerin rengini değiştirmek için
+
+    void Start()
+    {
+        // Rastgele bir sayı atıyoruz (1 ile 9 arasında)
+        sayı = Random.Range(1, 10);
+
+        // Objeye ulaşarak Renderer bileşenini alıyoruz
+        objRengi = GetComponent<Renderer>();
+    }
+
+    void OnMouseEnter()
+    {
+        // Fare hayvanın üzerine gelince sayıyı ekrana yazdır
+        Debug.Log($"Bu hayvanın sayısı: {sayı}");
+    }
+
+    void OnMouseDown()
+    {
+        // Fareyle hayvana tıklanınca
+        ToplamaKontrol.SayıEkle(sayı); // Toplama sistemine bu sayıyı gönder
+        Debug.Log($"Tıkladığın hayvanın sayısı: {sayı}");
+    }
+
+    public void RenkDeğiştir(bool doğruMu)
+    {
+        // Toplam doğruysa yeşil, yanlışsa kırmızı
+        if (doğruMu)
+            objRengi.material.color = Color.green;
+        else
+            objRengi.material.color = Color.red;
+    }
+}
